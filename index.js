@@ -51,7 +51,7 @@ app.get('/api/passenger/queue', (req, res) => {
 // return the number of taxis in the queue
 app.get('/api/taxi/queue', (req, res) => {
     res.json({
-        queueCount : 0
+        queueCount : 5
     })
 });
 

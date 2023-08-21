@@ -14,25 +14,30 @@ document.addEventListener('alpine:init', () => {
 					});
 			},
 			joinQueue() {
-
+				this.queueLength++;
 			},
 			leaveQueue() {
+				 {
+                    this.queueLength--;
+			}
 
-			},
-
-			joinTaxiQueue() {
-
+			joinTaxiQueue() 
+			this.taxiQueueLength++;
 			},
 
 			queueLength() {
+				return this.queueLength;
 
 			},
 
 			taxiQueueLength() {
+				return this.taxiQueueLength;
 
 			},
 
 			taxiDepart() {
+				if (this.taxiQueueLength > 0) 
+                    this.taxiQueueLength--;
 
 			}
 		}
